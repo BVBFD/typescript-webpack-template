@@ -10,7 +10,7 @@ const webpackMode = process.env.NODE_ENV || 'development';
 module.exports = {
   mode: webpackMode,
   entry: {
-    script: './src/script.js',
+    script: './src/script.ts',
   },
   output: {
     path: path.resolve('./dist'),
@@ -47,6 +47,13 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
+        test: /\.ts$/, // .ts 에 한하여 ts-loader를 이용하여 transpiling
+        exclude: /node_module/,
+        use: {
+          loader: 'ts-loader',
+        },
+      },
+      {
         test: /\.js$/,
         enforce: 'pre',
         use: ['source-map-loader'],
@@ -60,6 +67,10 @@ module.exports = {
         use: ['file-loader'],
       },
     ],
+  },
+  resolve: {
+    modules: [path.join(__dirname, 'src'), 'node_modules'], // 모듈 위치
+    extensions: ['.ts', '.js'],
   },
   plugins: [
     new HtmlWebpackPlugin({
