@@ -1,1 +1,3 @@
-import bgVideo from './videos/bgVideo.mp4';
+import { message } from './message.js';
+
+message('javascript scripts test!!');
