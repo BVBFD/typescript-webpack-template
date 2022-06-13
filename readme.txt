@@ -1,20 +1,31 @@
-1. 패키지 설치
+1. git clone ~
+clone 해서 복사해오기
+
+
+2. 패키지 설치
 터미널에 아래 점선 사이의 내용을 붙여 넣고 엔터를 누르세요.
+----------
+npm install
+----------
+또는
 ----------
 npm i -D @babel/cli @babel/core @babel/preset-env babel-loader clean-webpack-plugin copy-webpack-plugin core-js cross-env html-webpack-plugin source-map-loader terser-webpack-plugin webpack webpack-cli webpack-dev-server file-loader ts-loader typescript 
 ----------
 
-2. 개발용 서버 구동
+
+3. 개발용 서버 구동
 터미널에 아래 점선 사이의 내용을 붙여 넣고 엔터를 누르세요.
 ----------
 npm start
 ----------
 
-3. 빌드(배포용 파일 생성)
+
+4. 빌드(배포용 파일 생성)
 터미널에 아래 점선 사이의 내용을 붙여 넣고 엔터를 누르세요.
 ----------
 npm run build
 ----------
+
 
 (!)
 npm start 또는 npm run build 실행 시 에러가 난다면 Node.js를 LTS 버전(장기 지원 버전)으로 설치 후 다시 시도해 보세요.
@@ -22,6 +33,7 @@ npm start 또는 npm run build 실행 시 에러가 난다면 Node.js를 LTS 버
 ----------
 n lts
 ----------
+
 
 (!)
 ERROR in unable to locate '경로...'
